@@ -1,0 +1,25 @@
+<
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-7"><div class="alert alert-success">Login to perform operations</div>
+        <img src="https://i1.wp.com/inc42.com/wp-content/uploads/2019/11/shutterstock_1539156419-1.jpg?fit=1360%2C1020&ssl=1" class="img-fluid">            
+        </div>
+        
+        <div class="col-sm-4">
+            <span class="badge badge-primary">Login to the site here</span><br><br><br>
+            <div class="card">
+                <div class="card-body">
+                    <form (ngSubmit)="onSubmit()">
+                        <label for="username" >Name:</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" [(ngModel)]="username" name="username"/><br>
+                        <label for="password" >password:</label>&nbsp;&nbsp;<input type="text" [(ngModel)]="password" name="password"/>
+                        <br><input type="submit" value="submit" class="btn btn-primary">
+                    </form>
+                    
+                </div>
+            </div>  
+            <p class="alert" *ngIf="loginStatus==false">The username and password is invalid</p>          
+        </div>    
+    </div>
+    {{username}} {{password}}
+</div>
